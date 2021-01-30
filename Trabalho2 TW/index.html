@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Othello</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="icon" type="imagem/png" href="imagens/icon.png" />
+</head>
+
+<body>
+	<div class="cabecalho">
+		<img class="fundo" alt="imagem_fundo" src="imagens/Background.jpg" />
+	</div>
+	<br><br>
+	<div id="logo-inicial">
+	</div>
+	<div id="computer_wins">
+	</div>
+	<div id="human_wins">
+	</div>
+	<div id="empate">
+	</div>
+
+	<div id="area-principal">
+		<div class="area-tabuleiro">
+			<b></b>
+			<table>
+				<tr>
+					<td class="peca" id="11" onclick=selecionar_cell(1,1)> </td>
+					<td class="peca" id="12" onclick=selecionar_cell(1,2)> </td>
+					<td class="peca" id="13" onclick=selecionar_cell(1,3)> </td>
+					<td class="peca" id="14" onclick=selecionar_cell(1,4)> </td>
+					<td class="peca" id="15" onclick=selecionar_cell(1,5)> </td>
+					<td class="peca" id="16" onclick=selecionar_cell(1,6)> </td>
+					<td class="peca" id="17" onclick=selecionar_cell(1,7)> </td>
+					<td class="peca" id="18" onclick=selecionar_cell(1,8)> </td>
+
+				</tr>
+				<tr>
+					<td class="peca" id="21" onclick=selecionar_cell(2,1)> </td>
+					<td class="peca" id="22" onclick=selecionar_cell(2,2)> </td>
+					<td class="peca" id="23" onclick=selecionar_cell(2,3)> </td>
+					<td class="peca" id="24" onclick=selecionar_cell(2,4)> </td>
+					<td class="peca" id="25" onclick=selecionar_cell(2,5)> </td>
+					<td class="peca" id="26" onclick=selecionar_cell(2,6)> </td>
+					<td class="peca" id="27" onclick=selecionar_cell(2,7)> </td>
+					<td class="peca" id="28" onclick=selecionar_cell(2,8)> </td>
+				<tr>
+					<td class="peca" id="31" onclick=selecionar_cell(3,1)> </td>
+					<td class="peca" id="32" onclick=selecionar_cell(3,2)> </td>
+					<td class="peca" id="33" onclick=selecionar_cell(3,3)> </td>
+					<td class="peca" id="34" onclick=selecionar_cell(3,4)> </td>
+					<td class="peca" id="35" onclick=selecionar_cell(3,5)> </td>
+					<td class="peca" id="36" onclick=selecionar_cell(3,6)> </td>
+					<td class="peca" id="37" onclick=selecionar_cell(3,7)> </td>
+					<td class="peca" id="38" onclick=selecionar_cell(3,8)> </td>
+				</tr>
+				<tr>
+					<td class="peca" id="41" onclick=selecionar_cell(4,1)> </td>
+					<td class="peca" id="42" onclick=selecionar_cell(4,2)> </td>
+					<td class="peca" id="43" onclick=selecionar_cell(4,3)> </td>
+					<td class="peca" id="44" onclick=selecionar_cell(4,4)> </td>
+					<td class="peca" id="45" onclick=selecionar_cell(4,5)> </td>
+					<td class="peca" id="46" onclick=selecionar_cell(4,6)> </td>
+					<td class="peca" id="47" onclick=selecionar_cell(4,7)> </td>
+					<td class="peca" id="48" onclick=selecionar_cell(4,8)> </td>
+				</tr>
+				<tr>
+					<td class="peca" id="51" onclick=selecionar_cell(5,1)> </td>
+					<td class="peca" id="52" onclick=selecionar_cell(5,2)> </td>
+					<td class="peca" id="53" onclick=selecionar_cell(5,3)> </td>
+					<td class="peca" id="54" onclick=selecionar_cell(5,4)> </td>
+					<td class="peca" id="55" onclick=selecionar_cell(5,5)> </td>
+					<td class="peca" id="56" onclick=selecionar_cell(5,6)> </td>
+					<td class="peca" id="57" onclick=selecionar_cell(5,7)> </td>
+					<td class="peca" id="58" onclick=selecionar_cell(5,8)> </td>
+				</tr>
+				<tr>
+					<td class="peca" id="61" onclick=selecionar_cell(6,1)> </td>
+					<td class="peca" id="62" onclick=selecionar_cell(6,2)> </td>
+					<td class="peca" id="63" onclick=selecionar_cell(6,3)> </td>
+					<td class="peca" id="64" onclick=selecionar_cell(6,4)> </td>
+					<td class="peca" id="65" onclick=selecionar_cell(6,5)> </td>
+					<td class="peca" id="66" onclick=selecionar_cell(6,6)> </td>
+					<td class="peca" id="67" onclick=selecionar_cell(6,7)> </td>
+					<td class="peca" id="68" onclick=selecionar_cell(6,8)> </td>
+				</tr>
+				<tr>
+					<td class="peca" id="71" onclick=selecionar_cell(7,1)> </td>
+					<td class="peca" id="72" onclick=selecionar_cell(7,2)> </td>
+					<td class="peca" id="73" onclick=selecionar_cell(7,3)> </td>
+					<td class="peca" id="74" onclick=selecionar_cell(7,4)> </td>
+					<td class="peca" id="75" onclick=selecionar_cell(7,5)> </td>
+					<td class="peca" id="76" onclick=selecionar_cell(7,6)> </td>
+					<td class="peca" id="77" onclick=selecionar_cell(7,7)> </td>
+					<td class="peca" id="78" onclick=selecionar_cell(7,8)> </td>
+				</tr>
+				<tr>
+					<td class="peca" id="81" onclick=selecionar_cell(8,1)> </td>
+					<td class="peca" id="82" onclick=selecionar_cell(8,2)> </td>
+					<td class="peca" id="83" onclick=selecionar_cell(8,3)> </td>
+					<td class="peca" id="84" onclick=selecionar_cell(8,4)> </td>
+					<td class="peca" id="85" onclick=selecionar_cell(8,5)> </td>
+					<td class="peca" id="86" onclick=selecionar_cell(8,6)> </td>
+					<td class="peca" id="87" onclick=selecionar_cell(8,7)> </td>
+					<td class="peca" id="88" onclick=selecionar_cell(8,8)> </td>
+				</tr>
+			</table>
+
+		</div>
+
+
+	</div>
+	<div id="area-lateral">
+		<div id="total">
+			<!--online-->
+			<button onclick="onl()" id="online">Online</button>
+			<div id="online_text" class="open_window">
+				<div class="janelaON_online">
+					<span id="close_online"> &times;</span>
+					<form>
+						Username:
+						<input id="username" type="text" name="username">
+						Password:
+						<input type="password" id="minha_pass" name="minha_pass">
+						<input type="checkbox" onclick="password()">
+						<h5>Mostrar<br>password</h5>
+						<button type="button" id="botao_jogar">Jogar  </button>
+					</form>
+				</div>
+			</div>
+
+			<div id="escolha_online" class="open_window">
+				<div class="janelaON_offline">
+					<span id="close_escolha_online"> &times;</span>
+					<button id="online_game" class="botaooo" name="pc">Find game</button>
+				</div>
+			</div>
+
+			<!--offline-->
+			<button onclick="off()" id="offline">Offline</button>
+			<div id="offline_text" class="open_window">
+				<div class="janelaON_offline">
+					<span id="close_offline"> &times;</span>
+					<h1>Adversario</h1>
+					<button id="amigo" class="botaooo" name="amigo">Jogar com Amigo</button>
+					<button id="computador" class="botaooo" name="computador">Jogar com Computador</button>
+				</div>
+			</div>
+
+			<div id="dificuldade" class="open_window">
+				<div class="janelaON_offline">
+					<span id="close_dificuldade"> &times;</span>
+					<h1><br>Dificuldade</h1>
+					<button id="Facil" class="botaooo" name="Facil">Fácil</button>
+					<button id="Medio" class="botaooo" name="Medio">Médio</button>
+					<button id="Dificil" class="botaooo" name="Dificil">Dificil</button>
+				</div>
+			</div>
+
+			<div id="escolha" class="open_window">
+				<div class="janelaON_offline">
+					<span id="close_escolha"> &times;</span>
+					<h1><br>Escolha a cor da peça</h1>
+					<button id="jogador_branco" class="botaooo" name="jogador_branco">Peça Branca</button>
+					<button id="jogador_preto" class="botaooo" name="jogador_preto">Peça Preta</button>
+				</div>
+			</div>
+
+
+			<!--rules-->
+			<button onclick="rules()" id="rules">Regras</button>
+			<div id="rules_text" class="open_window">
+				<div class="janelaON_rules">
+					<span id="close_rules"> &times;</span>
+					RULES:
+					<ol>
+						<li>Tabuleiro quadrado. Grelha com 8 linhas por 8 colunas e com dois jogadores, um preto e outro
+							branco</li>
+						<li>Na posição inicial há 4 peças
+							2 de cada uma das 2 tonalidades — claro e escuro
+							Colocadas nas casas centrais
+							Peças da mesma tonalidade ficam em diagonal
+							As peças escuras jogam primeiro</li>
+						<li>
+							Durante o jogo os jogadores jogam alternadamente
+							Colocam uma peça da sua cor numa casa livre
+							Se na mesma linha, coluna ou diagonal da peça jogada …
+							… peças da cor contrária viram para a cor do jogador
+							Só pode ser jogada uma peça se for virada alguma
+						</li>
+						<li>
+							A peça colocada pode virar várias peças do adversário
+							Que estão na mesma linha coluna ou diagonal da peça jogada
+							Desde que num dos extremos esteja a peça jogada
+							E no outro esteja uma peça do mesmo tom
+						</li>
+						<li>
+							Podem ser viradas várias peças consecutivas do adversário
+							Na mesma linha, coluna ou diagonal
+							Desde que delimitadas pela peça jogada
+							E outra do mesmo tom (do jogador)
+						</li>
+						<li>
+							Na sua vez, o jogador só pode jogar se virar peças
+							Caso conrário não poderá jogar e terá de passar a jogada
+							Mas só pode passar se não tiver jogada possível
+						</li>
+						<li>
+							Jogo termina quando nenhum jogador pode jogar
+							Geralmente quando o tabuleiro está todo preenchido
+							Mas não necessariamente — ver exemplos acima
+							Ganha o jogador com maior número de peças
+						</li>
+
+
+					</ol>
+				</div>
+			</div>
+			<!--Rankings-->
+
+
+			 <button onclick="getRanking()"  id="rankings">Rankings</button>
+				 <div id="ranks" class="open_window">
+					 <div class="janelaON_ranking">
+						 <span id="close_ranking"> &times;</span>
+						 <div id="result"></div>
+						 <table id ="tableinfo">
+						</table>	
+					 </div>
+				 </div>
+
+
+		</div>
+
+		<div id="game">
+			<div id="vez_preto">
+			</div>
+			<div id="vez_branca">
+			</div>
+
+			<div id="botton_game1">
+				PC : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<div id="branco">
+				 <p id="pontos_branco"></p>
+				</div>
+			</div>
+			<div id="botton_game2">
+				Jogador : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<div id="preto">
+					<p id="pontos_preto"></p>
+				</div>
+			</div>
+
+
+
+
+			<div id="give_up" onclick=give_up()>
+				Desistir
+
+
+			</div>
+
+		</div>
+
+
+		<div id="game_online">
+			<div id="vez_preto1">
+			</div>
+			<div id="vez_branca1">
+			</div>
+
+			<div id="botton_game11">
+				Jogador1 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<div id="branco1">
+				 <p id="pontos_branco1"></p>
+				</div>
+			</div>
+			<div id="botton_game21">
+				Jogador2 : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<div id="preto1">
+					<p id="pontos_preto1"></p>
+				</div>
+			</div>
+
+
+
+
+			<div id="give_up1" onclick=give_up()>
+				Desistir
+
+
+			</div>
+
+		</div>
+
+
+
+
+
+<!--		<div id="sair" onclick="sair()">
+			Home
+		</div>-->
+		<div id="sair" onclick=sair()>
+			Home
+		</div>
+	</div>
+	<div id="rodape">
+		Design by Rita & Rui
+	</div>
+
+	<script src="jogo.js"></script>
+	<script src="algoritmo.js"></script>
+
+</body>
+
+</html>

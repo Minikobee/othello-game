@@ -1,0 +1,532 @@
+/*Limpar formatações padrão*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 1em;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	background: #e6e6e6;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+/*
+**** Layout ****
+*/
+
+#area-logo, #area-menu {
+	padding: 10px;
+}
+
+#logo-inicial
+{
+	width: 650px;
+	height:400px;
+	margin:20px auto;
+	margin-left: 200px;
+	margin-bottom:50px;
+	padding: 15px;
+	float: left;
+	display:block;
+	background-image:url("../imagens/game_zone.jpg");
+  background-repeat: no-repeat;
+}
+
+#computer_wins
+{
+	width: 650px;
+	height:400px;
+	margin:20px auto;
+	margin-left: 300px;
+	margin-bottom:50px;
+	padding: 15px;
+	float: left;
+	display:none;
+	background-image:url("../imagens/Computer_Wins.png");
+  background-repeat: no-repeat;
+}
+
+#empate
+{
+	width: 650px;
+	height:400px;
+	margin:20px auto;
+	margin-left:350px;
+	margin-bottom:50px;
+	margin-top:70px;
+	padding: 15px;
+	float: left;
+	display:none;
+	background-image:url("../imagens/empate.png");
+  background-repeat: no-repeat;
+}
+
+#human_wins
+{
+	width: 200px;
+	height:300px;
+	margin:20px auto;
+	transform: scale(1.5);
+	margin-left: 500px;
+	margin-bottom:50px;
+	margin-top:100px;
+	padding: 15px;
+	float: left;
+	display:none;
+	background-image:url("../imagens/human_wins.jpeg");
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+#area-principal {
+	width: 800px;
+	margin: 0 auto;
+	margin-left: 300px;
+	padding: 15px;
+	float: left;
+	display:none;
+}
+
+#area-postagens {
+	width: 660px;
+	float: left;
+}
+
+#area-lateral {
+	margin-left: -250px;
+	width: 240px;
+	float: right;
+}
+
+
+#rodape {
+	clear: both;
+	text-align: center;
+	padding: 15px;
+	background-color:rgba(0, 20, 245, 1);
+	margin-top:550px;
+}
+
+
+
+/*--------------------------------*/
+.area-tabuleiro{
+	margin-top: 0px;
+}
+
+
+.cabecalho{
+   	position: relative;
+ 	top: 0;
+  	left: 0;
+}
+
+.fundo{
+	position: relative;
+	text-align: center;
+  	top: 0;
+  	left: 0;
+	height:300px;
+	width:100%;
+}
+
+
+/*---------------------*/
+.peca{
+	 width:20px;
+	 height:20px;
+	 background-color:green;
+	 border:seagreen 1px;
+	 padding: 0.9em;
+}
+
+#online_game{
+	margin-top:50px;
+	margin-left:100px;
+	padding: 20px
+	border: 3px solid white;
+	border-radius: 10px;
+}
+
+
+
+/*butoes*/
+#online, #offline,#rules,#rankings{
+	width: 200px;
+	height: 40px;
+	margin-top: 2em;
+	border:5px solid #2E8B57	;
+	border-radius:4px;
+	display:inline-block;
+	left: 100px;
+}
+
+#online:hover, #offline:hover,#rules:hover,#rankings:hover
+{
+	background-color: green
+}
+
+#rulesText{
+	display: none;
+}
+
+.open_window{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 200px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+.janelaON{
+	background-color: beige;
+	font-family: 'Courier New', Courier, monospace;
+	color: green;
+	border: 1px solid white;
+	border-radius: 15px;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	padding: 10px;
+}
+
+.janelaON_rules /* janela para as regras*/
+{
+	background-color: beige;
+	font-family: 'Courier New', Courier, monospace;
+	color: green;
+	border: 1px solid white;
+	border-radius: 15px;
+	width: 600px;
+	height: 300px;
+	margin: auto;
+	padding: 10px;
+	font-size: 12px;
+	padding: 3%;
+	border-radius: 5px;
+}
+
+
+
+.janelaON_online /* janela para as regras*/
+{
+	background-color: beige;
+	font-family: 'Courier New', Courier, monospace;
+	color: black;
+	background-color:rgba(0,230, 64, 0.9);
+/*	border: 1px solid white;*/
+	/*border-radius: 15px;*/
+	width: 320px;
+	height: 200px;
+	margin: auto;
+	padding: 10px;
+}
+
+
+
+.janelaON_offline 
+{
+	background-color: beige;
+	font-family: 'Courier New', Courier, monospace;
+	background-color:rgba(0,230, 64, 0.9);
+	color: green;
+/*	border: 1px solid white;*/
+	/*border-radius: 15px;*/
+	width: 320px;
+	height: 150px;
+	margin: auto;
+	padding: 10px;
+	display: block;
+}
+
+.janelaON_ranking 
+{
+	background-color: beige;
+	font-family: 'Courier New', Courier, monospace;
+	background-color:rgba(0,230, 64, 0.9);
+	color: green;
+/*	border: 1px solid white;*/
+	/*border-radius: 15px;*/
+	width: 250px;
+	height: 220px;
+	margin: auto;
+	padding: 30px;	
+	display: block;
+}
+
+
+#username
+{
+	margin-top:50px;
+}
+
+#minha_pass
+{
+	margin-top:20px;
+}
+
+#botao_jogar
+{
+	position:absolute;
+	right:580px;
+	top:350px;
+  background-image:url("../imagens/icon2_EhB_icon.ico");
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.botaooo {
+	border: 5px solid #2E8B57;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+
+#amigo
+{
+	margin-top: 30px;
+    margin-left: 20px;
+}
+#computador
+{
+	margin-top: 30px;
+}
+
+/*tipo de letras*/
+
+h5
+{
+	font-size:0.7em;
+	position:absolute;
+	left:760px;
+	top:295px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h2
+{
+	position:absolute;
+}
+
+#h2_computador
+{
+	left:490px;
+	top:300px;
+	font-size:0.7em;
+	color:black;
+	display: block;
+}
+
+#h2_amigo
+{
+	left:670px;
+	top:300px;
+	font-size:0.7em;
+	color:black;
+}
+
+#Facil {
+	margin-left: 80px;
+	margin-top: 20px;
+}
+
+#h2_Dificil
+{
+	left:710px;
+	top:300px;
+	font-size:0.7em;
+	color:black;
+	display: block;
+}
+
+#h2_Branca
+{
+	left:520px;
+	top:300px;
+	font-size:0.7em;
+	color:black;
+	display: block;
+}
+
+#h2_Preta
+{
+	left:520px;
+	top:300px;
+	font-size:0.7em;
+	color:black;
+	display: block;
+}
+
+#jogador_preto {
+	margin-top: 20px;
+	margin-left: 90px;
+}
+
+#jogador_branco {
+	margin-top: 20px;
+	margin-left: 25px;
+}
+
+h1
+{
+	font-size: 1.1em;
+    font-family: "Times New Roman", Times, serif;
+    color: black;
+    text-align: center;
+}
+
+#pontos_fim_do_jogo
+{
+	width:170px;
+	height:30px;
+	background-color:green;
+	border:seagreen 1px;
+	padding: 0.9em;
+	top:200px;
+	border-radius: 5px;
+	display:block;
+}
+
+#botton_game1, #botton_game2, #botton_game11, #botton_game21{
+	 width:170px;
+	 height:30px;
+	 background-color:green;
+	 border:seagreen 1px;
+	 padding: 0.9em;
+	 margin-top: 1.1em;
+	 border-radius: 5px;
+}
+
+.peca.branca{
+	/*height: 15px;
+  width: 15px;
+  background-color:white;
+  border-radius: 100%;
+  display: inline-block;*/
+	background-size: 50px;
+	background-image:url("../imagens/peca_branca.png");
+  background-repeat: no-repeat;
+}
+
+.peca.preto {
+	background-size: 50px;
+	background-image:url("../imagens/peca_preta.png");
+  background-repeat: no-repeat;
+}
+
+#vez_branca1
+{
+	width:50px;
+	height:100px;
+	right:-115px;
+	top:206px;
+	position:relative;
+	background-size: 50px;
+	background-image:url("../imagens/your_turn.png");
+	background-repeat: no-repeat;
+  display:none;
+}
+
+#vez_preto1
+{
+	width:50px;
+	height:100px;
+	right:-115px;
+	top:134px;
+	position:relative;
+	background-size: 50px;
+	background-image:url("../imagens/your_turn.png");
+	background-repeat: no-repeat;
+	display:none;
+}
+
+#vez_branca
+{
+	width:50px;
+	height:100px;
+	right:-45px;
+	top:134px;
+	position:relative;
+	background-size: 50px;
+	background-image:url("../imagens/your_turn.png");
+	background-repeat: no-repeat;
+  display:none;
+}
+
+#vez_preto
+{
+	width:50px;
+	height:100px;
+	right:-85px;
+	top:209px;
+	position:relative;
+	background-size: 50px;
+	background-image:url("../imagens/your_turn.png");
+	background-repeat: no-repeat;
+	display:none;
+}
+
+#game, #game_online
+{
+	display: none;
+}
+
+#total{
+	display: block;
+}
+
+
+
+#give_up, #give_up1 {
+	margin-top: 13em;
+	width:170px;
+	 height:20px;
+	 background-color:rgba(255, 0, 0, 0.7);
+	 border:seagreen 1px;
+	 padding: 0.9em;
+	 border-radius: 5px;
+	 text-align: center;
+}
+
+
+#sair{
+	margin-top: 7em;
+	width:170px;
+	 height:20px;
+	 background-color:rgba(255, 0, 0, 0.7);
+	 border:seagreen 1px;
+	 padding: 0.9em;
+	 border-radius: 5px;
+	 text-align: center;
+	display: none;
+}
+
+#give_up:hover, #sair:hover{
+	background-color: rgb(255, 0, 0);
+	color:white;
+}
